@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GameVault — Documentación API</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css">
+  <style>
+    body { margin: 0; background: #fafafa; }
+    .topbar { display: none; }
+    .gv-banner { margin: 0; padding: 14px 20px; background: #1b1430; color: #fff; font: 14px/1.5 system-ui,sans-serif; }
+    .gv-banner strong { font-size: 16px; }
+    .gv-banner small { display:block; opacity:.84; margin-top:4px }
+  </style>
+</head>
+<body>
+  <div class="gv-banner">
+    <strong>GameVault · API REST · Corte 2</strong>
+    <small>Documentación interactiva OpenAPI 3.0. La API se ejecuta localmente en http://localhost:3000.
+    Para usar «Try it out», inicia el servidor Node.js en tu computador; esta página no aloja el backend.</small>
+  </div>
+  <div id="swagger-ui"></div>
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+  <script>
+    window.onload = () => SwaggerUIBundle({
+      url: "./openapi.json",
+      dom_id: "#swagger-ui",
+      deepLinking: true,
+      displayRequestDuration: true,
+      docExpansion: "none",
+      filter: true,
+      persistAuthorization: false
+    });
+  </script>
+</body>
+</html>
